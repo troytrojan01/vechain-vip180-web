@@ -1,0 +1,17 @@
+---
+- name: deploy static website
+  hosts: "{{env}}"
+  remote_user: "vechain"
+  tasks:
+    - name: "copy files to remote"
+      synchronize:
+        src: ../dist/
+        dest: /var/www/issue-token
+        use_ssh_args: yes
+        delete: yes
+        rsync_opts:
+          - "--exclude=.DS_Store"
+      become: yes
+    - name: reload nginx
+      service: name=nginx state=reloaded
+      become: yes

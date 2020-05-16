@@ -1,0 +1,28 @@
+---
+closed:
+  hosts:
+    location-cn-t2:
+      ansible_ssh_host: 192.168.31.191
+open:
+  hosts:
+    baas-qq-gz-prd-web-01:
+      ansible_ssh_host: baas-qq-gz-prd-web-01
+      ansible_ssh_port: 56000
+production:
+  hosts:
+    baas-qq-gz-prd-web-01:
+      ansible_ssh_host: baas-qq-gz-prd-web-01
+      ansible_ssh_port: 56000
+    baas-qq-hk-prd-web-01:
+      ansible_ssh_host: baas-qq-hk-prd-web-01
+      ansible_ssh_port: 56000
+test:
+  hosts:
+    ecs-ali-sh-test-02:
+      ansible_ssh_host: ecs-ali-sh-test-02
+      ansible_ssh_port: 56000
+dev:
+  hosts:
+    ecs-ali-sh-dev-02:
+      ansible_ssh_host: ecs-ali-sh-dev-02
+      ansible_ssh_port: 56000
